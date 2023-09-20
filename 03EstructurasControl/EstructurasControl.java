@@ -48,7 +48,22 @@ class EstructurasControl{
 
         do{
             //aqui va todo el programa
-
+            System.out.println("Bienvenido al programa :3 ");
+            System.out.println("Elija alguna de las siguientes opciones: ");
+            System.out.println("1. Descuento por edad ");
+            System.out.println("2. Convertir numero decimal a binario "); //profe
+            System.out.println("3. Convertir temperaturas ");
+            System.out.println("4. Numeros positivos y negativos ");
+            System.out.println("5. Tiendita "); //profe
+            System.out.println("6. Area y perimetro ");
+            System.out.println("7. Tabla "); //profe
+            System.out.println("8. Factorial ");
+            System.out.println("9. Dibujo "); //profe
+            System.out.println("10. Figura Hueca ");
+            System.out.println("11. Patrones de codigo ");
+            System.out.println("12. Diamante ");
+            System.out.println("13. Calculadora ");
+            System.out.println("14. Salir ");
 
 
             //aqui adentro de preguntar
