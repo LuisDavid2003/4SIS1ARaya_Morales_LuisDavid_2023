@@ -41,7 +41,7 @@ class EstructurasControl{
         //si la declaro dentro de un metodo es local
 
         int opcion, numbinario, total, cantidadproducto, num1;
-        float precio, resultado = 0, compra = 0;
+        float precio, resultado = 0, compra=0;
         String nombreproducto;
         String binario = "";
         char letra;
@@ -101,6 +101,24 @@ class EstructurasControl{
                 case 4:
                     break;
                 case 5:
+                    //tiendita
+                    System.out.println("Bienvenido a la tiendita");
+                    System.out.println("Por favor, introduzca el numero de productos que desea comprar: ");
+                    total = entrada.nextInt();
+
+                    for(int i = 1; i <= total; i++){
+                        System.out.println("Introduzca el nombre del producto: ");
+                        nombreproducto = entrada.next();
+                        System.out.println("Introduzca el precio: ");
+                        precio = entrada.nextFloat();
+                        System.out.println("Introduzca la cantidad del producto: ");
+                        cantidadproducto = entrada.nextInt();
+                        //operacion
+                        resultado = precio * cantidadproducto;
+                        compra = compra + resultado; //compra += resultado
+                    }
+                    System.out.println("El total de la compra es: " + compra);
+                    compra = 0;
                     break;
                 case 6:
                     break;
