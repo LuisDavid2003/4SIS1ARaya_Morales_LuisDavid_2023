@@ -273,6 +273,7 @@ class EstructurasControl{
                     break;
                 case 13:
                 //calculadora
+                System.out.println("opcion de calculadora");
                     break;
                 case 14:
                 //salir
