@@ -5,7 +5,7 @@
 //Libreria
 import java.io.*;
 
-class EntradaTexto{
+class Clasedepoo{
 
     //debe de existir un metodo principal
     public static void main(String[] args) throws IOException {
@@ -13,7 +13,7 @@ class EntradaTexto{
         //declaracion
         char nombre;
         //mensaje para el usuario
-        System.out.print("Por favor introduce tu nombre:         ");
+        System.out.print("Por favor introduce tu nombre: ");
         //ln es para salto de linea
         
         //asignar que operacion o comportamiento le voy a otorgar a la variable
@@ -23,8 +23,9 @@ class EntradaTexto{
         //console() es el metodo que puede obtener los datos de la consola
         //readline() es el metodo que puede dar lectura a los datos introducido en la consola
 
-        System.out.print("Hola" + nombre + "Bienvenido a tronar wwwwiiiii");
+        System.out.print("Hola" + nombre + "Bienvenido a la clase wwwwiiiii");
         //A tronar    
     }
 
 }
+
