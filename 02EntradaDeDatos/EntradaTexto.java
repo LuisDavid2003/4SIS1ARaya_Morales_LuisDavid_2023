@@ -23,8 +23,8 @@ class EntradaTexto{
         //console() es el metodo que puede obtener los datos de la consola
         //readline() es el metodo que puede dar lectura a los datos introducido en la consola
 
-        System.out.print("Hola" + nombre + "Bienvenido a tronar wiii");
-
+        System.out.print("Hola" + nombre + "Bienvenido a tronar wwwwiiiii");
+        //A tronar    
     }
 
 }
