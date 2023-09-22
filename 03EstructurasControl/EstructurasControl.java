@@ -272,8 +272,11 @@ class EstructurasControl{
                 case 12:
                     break;
                 case 13:
+                //calculadora
                     break;
                 case 14:
+                //salir
+                    System.out.println("opcion de salida");
                     break;
                 default:
                     System.out.println("Por favor; elije una opcion valida");
