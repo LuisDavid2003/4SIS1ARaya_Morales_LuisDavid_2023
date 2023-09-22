@@ -40,8 +40,9 @@ class EstructurasControl{
         //las variables son de dos tipos globales y locales
         //si la declaro dentro de un metodo es local
 
-        int opcion, numbinario, total, cantidadproducto, num1;
-        float precio, resultado = 0, compra=0;
+        int opcion, numbinario, total, cantidadproducto, num1, lado, lado1, lado2, lado3, base, altura, edad, rst=0, ent=200;
+        float precio, resultado = 0, compra=0, area, perimetro, radio;
+        double pi=3.1416, radiocir, perimetrocir, areacir, gradoC, gradoF, gradoK;
         String nombreproducto;
         String binario = "";
         char letra;
@@ -51,10 +52,10 @@ class EstructurasControl{
             System.out.println("Bienvenido al programa :3 ");
             System.out.println("Elija alguna de las siguientes opciones: ");
             System.out.println("1. Descuento por edad ");
-            System.out.println("2. Convertir numero decimal a binario "); //profe
+            System.out.println("2. Convertir numero decimal a binario "); //profe*
             System.out.println("3. Convertir temperaturas ");
-            System.out.println("4. Numeros positivos y negativos ");
-            System.out.println("5. Tiendita "); //profe
+            System.out.println("4. Numeros positivos y negativos ");//mi* 
+            System.out.println("5. Tiendita "); //profe*
             System.out.println("6. Area y perimetro ");
             System.out.println("7. Tabla "); //profe
             System.out.println("8. Factorial ");
@@ -70,6 +71,36 @@ class EstructurasControl{
             //menu
             switch(opcion){
                 case 1:
+                    //Descuento por edad 
+                    System.out.println("Bienvenidos al museo de historia");
+                    System.out.println("Compra de entradas a $200, descuento de acuerdo a edades");
+                    System.out.println("Que edad tienes");
+                    edad = entrada.nextInt();
+
+                    if(edad >= 18){
+                        System.out.println("Eres un mayor de edad y tu descuento es del 25%");
+                        rst = (int) (ent*0.25);
+                        ent = ent-rst;
+                        System.out.println("La entrada con descuento es de:" + ent);
+                    }
+
+                    if(edad <= 17 && edad >= 6){
+                        System.out.println("Eres un menor de edad y tu descuento es del 50%");
+                        rst = (int) (ent*0.50);
+                        ent = ent-rst;
+                        System.out.println("La entrada con descuento es de:" + ent);
+                    }
+
+                    if(edad < 6){
+                        System.out.println("Eres un niño, el descuento es del 75%");
+                        rst = (int) (ent*0.75);
+                        ent = ent-rst;
+                        System.out.println("La entrada con descuento es de:" + ent);
+                    }
+                    if(edad == 0){
+                        System.out.println("Error");
+                    }
+
                     break;
                 case 2:
                     //decimal a binario
@@ -97,9 +128,62 @@ class EstructurasControl{
                     break;
 
                 case 3:
+                    //Convertir temperaturas
+                    System.out.println("Elija cual opcion desea convertir");
+                    System.out.println("1. Celsius a Fahrenheit");
+                    System.out.println("2. Fahrenheit a Kelvin");
+                    System.out.println("3. Kelvin a Celsius");
+
+                    opcion = entrada.nextInt();
+                    switch (opcion){
+                        case 1:
+                        System.out.println("Introduzca los grados Celsius");
+                        gradoC = entrada.nextDouble();
+
+                        gradoF = 9/5 * gradoC + 32;
+                        
+                        System.out.println("El resultado es: " + gradoF);
+                            break;
+
+                        case 2:
+                        System.out.println("Introduzca los grados Fahrenheit");
+                        gradoF = entrada.nextDouble();
+
+                        gradoK = gradoF - 32/1.8 + 273.15;
+
+                        System.out.println("El resultado es: " + gradoK);
+                            break;
+                        case 3:
+                        System.out.println("Introduzca los grados Kelvin");
+                        gradoK = entrada.nextDouble();
+
+                        gradoC = gradoK - 273.15;
+
+                        System.out.println("El resultado es: " + gradoC);
+                            break;
+                    }
                     break;
+                    
                 case 4:
+                    //numeros positivos y negativos
+                    for(int i = 1; i <= 5; i++){
+                    System.out.println("Introduzca un numero: ");
+                    num1 = entrada.nextInt();
+
+                    if(num1 > 0){
+                        System.out.println("El numero ingresado es positivo");
+                    }
+
+                    else if(num1 < 0){
+                        System.out.println("El numero ingresado es negativo");
+                    }
+
+                    else if(num1 == 0){
+                        System.out.println("El numero es neutro: 0");
+                    }
+                }
                     break;
+                    
                 case 5:
                     //tiendita
                     System.out.println("Bienvenido a la tiendita");
@@ -121,6 +205,59 @@ class EstructurasControl{
                     compra = 0;
                     break;
                 case 6:
+                    //Area y perimetro
+                    System.out.println("¿De que figura desea calcular el area y perimetro?");
+                    System.out.println("Por favor, seleccione la figura que desea calcular");
+                    System.out.println("1. Area y perimetro de un circulo ");
+                    System.out.println("2. Area y perimetro de un cuadrado ");
+                    System.out.println("3. Area y perimetro de un triangulo ");
+                     opcion = entrada.nextInt();
+                     switch (opcion){
+                        case 1:
+                        System.out.println("Introduzca el radio del circulo");
+                        radiocir = entrada.nextInt();
+
+                        perimetrocir = 2 * pi * radiocir;
+                        areacir = pi*radiocir*radiocir; 
+
+                        System.out.println("El perimetro del circulo es: " + perimetrocir);
+                        System.out.println("El area del circulo es: " + areacir);
+
+                            break;
+
+                        case 2:
+                        System.out.println("Introduzca el lado del cuadrado en cm");
+                        lado = entrada.nextInt();
+
+                        area = lado * lado;
+                        perimetro = lado + lado + lado + lado;
+
+                        System.out.println("El area el cuadrado es: cm2" + area);
+                        System.out.println("El perimetro del cuadrado es: cm" + perimetro);
+
+                            break;
+
+                        case 3:
+                        System.out.println("Introduzca los lados del triangulo en cm");
+                        System.out.println("1er lado");                        
+                        lado1 = entrada.nextInt();
+                        System.out.println("2do lado");
+                        lado2 = entrada.nextInt();
+                        System.out.println("3er lado");
+                        lado3 = entrada.nextInt();
+                        System.out.println("Introduzca el valor de la base");
+                        base = entrada.nextInt();
+                        System.out.println("Introduzca el valor de la altura");
+                        altura = entrada.nextInt();
+
+                        perimetro = lado1 + lado2 + lado3;
+                        area = base * altura/2;
+
+                        System.out.println("El perimetro del triangulo es: cm" + perimetro);
+                        System.out.println("El area del triangulo es: cm2" + area);
+
+                            break;
+                     }
                     break;
                 case 7:
                     break;
