@@ -40,7 +40,7 @@ class EstructurasControl{
         //las variables son de dos tipos globales y locales
         //si la declaro dentro de un metodo es local
 
-        int opcion, numbinario, total, cantidadproducto, num1, lado, lado1, lado2, lado3, base, altura, edad, rst=0, ent=200;
+        int opcion, numbinario, total, cantidadproducto, num1, num2, lado, lado1, lado2, lado3, base, altura, edad, rst=0, ent=200, factorial, alto, ancho, fila, columna;
         float precio, resultado = 0, compra=0, area, perimetro, radio;
         double pi=3.1416, radiocir, perimetrocir, areacir, gradoC, gradoF, gradoK;
         String nombreproducto;
@@ -51,20 +51,20 @@ class EstructurasControl{
             //aqui va todo el programa
             System.out.println("Bienvenido al programa :3 ");
             System.out.println("Elija alguna de las siguientes opciones: ");
-            System.out.println("1. Descuento por edad ");
+            System.out.println("1. Descuento por edad "); //yo*
             System.out.println("2. Convertir numero decimal a binario "); //profe*
-            System.out.println("3. Convertir temperaturas ");
-            System.out.println("4. Numeros positivos y negativos ");//mi* 
+            System.out.println("3. Convertir temperaturas "); //yo*
+            System.out.println("4. Numeros positivos y negativos ");//yo* 
             System.out.println("5. Tiendita "); //profe*
-            System.out.println("6. Area y perimetro ");
-            System.out.println("7. Tabla "); //profe
-            System.out.println("8. Factorial ");
-            System.out.println("9. Dibujo "); //profe
-            System.out.println("10. Figura Hueca ");
+            System.out.println("6. Area y perimetro "); //yo*
+            System.out.println("7. Tabla ");
+            System.out.println("8. Factorial "); //yo*
+            System.out.println("9. Dibujo ");
+            System.out.println("10. Figura Hueca "); //yo*
             System.out.println("11. Patrones de codigo ");
             System.out.println("12. Diamante ");
-            System.out.println("13. Calculadora ");
-            System.out.println("14. Salir ");
+            System.out.println("13. Calculadora "); //yo*
+            System.out.println("14. Salir "); //yo*
 
             opcion = entrada.nextInt();
 
@@ -262,22 +262,103 @@ class EstructurasControl{
                 case 7:
                     break;
                 case 8:
+                //Factorial
+                System.out.println("Factorial");
+                System.out.println("Introduzca un numero");
+                num1 = entrada.nextInt();
+                factorial = 1;
+                for(int i = 1; i<=num1; i++){
+                    factorial = factorial * i;
+                }
+                System.out.println("El factorial de: " +num1+" Es: "+ factorial);
                     break;
+
                 case 9:
                     break;
                 case 10:
+                //figura hueca (ejemplo: rectangulo)
+                System.out.print("Introduzca el ancho de la figura rectangular: ");
+                ancho = entrada.nextInt();
+                System.out.print("Introduzca el alto de la figura rectangular: ");
+                alto = entrada.nextInt();
+
+                for(columna = 1; columna <= ancho; columna++)
+                System.out.print("*");
+                System.out.println();
+
+                for(fila = 1; fila <= alto-2; fila++){
+                    System.out.println("*");
+                    for(columna = 1; columna <= ancho-2; columna++){
+                        System.out.print(" ");
+                    }
+                    System.out.println("*");
+                }
+
+                for(columna = 1; columna <= ancho; columna++)
+                System.out.print("*");
+                System.out.println();
                     break;
+
                 case 11:
                     break;
                 case 12:
-                    break;
+                    break; 
                 case 13:
                 //calculadora
-                System.out.println("opcion de calculadora");
+                System.out.println("Calculadora");
+                System.out.println("¿Que desea realizar?");
+                System.out.println("1. Suma");
+                System.out.println("2. Resta");
+                System.out.println("3. Multiplicacion");
+                System.out.println("4. Division");
+
+                opcion = entrada.nextInt();
+                switch (opcion) {
+                    case 1:
+                    System.out.println("Ingrese el 1er numero: ");
+                    num1 = entrada.nextInt();
+                    System.out.println("Ingrese el 2do numero: ");
+                    num2 = entrada.nextInt();
+                    resultado = num1 + num2;
+
+                    System.out.println("La suma es: " + resultado);
+                        break;
+                    case 2:
+                    System.out.println("Ingrese el 1er numero: ");
+                    num1 = entrada.nextInt();
+                    System.out.println("Ingrese el 2do numero: ");
+                    num2 = entrada.nextInt();
+                    resultado = num1 - num2;
+
+                    System.out.println("La resta es: " + resultado);
+                        break;
+                    
+                    case 3:
+                    System.out.println("Ingrese el 1er numero: ");
+                    num1 = entrada.nextInt();
+                    System.out.println("Ingrese el 2do numero: ");
+                    num2 = entrada.nextInt();
+                    resultado = num1 * num2;
+
+                    System.out.println("La multiplicacion es: " + resultado);
+                        break;
+
+                    case 4:
+                    System.out.println("Ingrese el 1er numero: ");
+                    num1 = entrada.nextInt();
+                    System.out.println("Ingrese el 2do numero: ");
+                    num2 = entrada.nextInt();
+                    resultado = num1 / num2;
+
+                    System.out.println("La division es: " + resultado);
+                        break;        
+                }
+
                     break;
                 case 14:
                 //salir
-                    System.out.println("opcion de salida");
+                    System.out.println("Hasta pronto");
+                    System.exit(0);
                     break;
                 default:
                     System.out.println("Por favor; elije una opcion valida");
