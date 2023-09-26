@@ -40,7 +40,7 @@ class EstructurasControl{
         //las variables son de dos tipos globales y locales
         //si la declaro dentro de un metodo es local
 
-        int opcion, numbinario, total, cantidadproducto, num1, num2, lado, lado1, lado2, lado3, base, altura, edad, rst=0, ent=200, factorial, alto, ancho, fila, columna;
+        int opcion, numbinario, total, cantidadproducto, num1, num2, lado, lado1, lado2, lado3, base, altura, edad, rst=0, ent=200, factorial, alto, ancho, fila, columna, n;
         float precio, resultado = 0, compra=0, area, perimetro, radio;
         double pi=3.1416, radiocir, perimetrocir, areacir, gradoC, gradoF, gradoK;
         String nombreproducto;
@@ -57,12 +57,12 @@ class EstructurasControl{
             System.out.println("4. Numeros positivos y negativos ");//yo* 
             System.out.println("5. Tiendita "); //profe*
             System.out.println("6. Area y perimetro "); //yo*
-            System.out.println("7. Tabla ");
+            System.out.println("7. Tabla "); //yo*
             System.out.println("8. Factorial "); //yo*
-            System.out.println("9. Dibujo ");
+            System.out.println("9. Dibujo "); //yo*
             System.out.println("10. Figura Hueca "); //yo*
-            System.out.println("11. Patrones de codigo ");
-            System.out.println("12. Diamante ");
+            System.out.println("11. Patrones de codigo "); //yo*
+            System.out.println("12. Diamante "); //yo*
             System.out.println("13. Calculadora "); //yo*
             System.out.println("14. Salir "); //yo*
 
@@ -260,7 +260,23 @@ class EstructurasControl{
                      }
                     break;
                 case 7:
+                //tabla
+                System.out.println("Bienvenido a la tabla de numeros");
+                System.out.println("Aqui se muestran los numeros del 1 al 10, multiplicados x10, x100 y x1000");
+                System.out.println("");
+                System.out.printf("%s%n"," N ");
+                System.out.printf("|%s|%s|%s|%s|%n","1","10","100","1000");
+                System.out.printf("|%s|%s|%s|%s|%n","2","20","200","2000");
+                System.out.printf("|%s|%s|%s|%s|%n","3","30","300","3000");
+                System.out.printf("|%s|%s|%s|%s|%n","4","40","400","4000");
+                System.out.printf("|%s|%s|%s|%s|%n","5","50","500","5000");
+                System.out.printf("|%s|%s|%s|%s|%n","6","60","600","6000");
+                System.out.printf("|%s|%s|%s|%s|%n","7","70","700","7000");
+                System.out.printf("|%s|%s|%s|%s|%n","8","80","800","8000");
+                System.out.printf("|%s|%s|%s|%s|%n","9","90","900","9000");
+                System.out.printf("|%s|%s|%s|%s|%n","10","100","1000","10000");
                     break;
+
                 case 8:
                 //Factorial
                 System.out.println("Factorial");
@@ -274,35 +290,80 @@ class EstructurasControl{
                     break;
 
                 case 9:
-                    break;
-                case 10:
-                //figura hueca (ejemplo: rectangulo)
-                System.out.print("Introduzca el ancho de la figura rectangular: ");
-                ancho = entrada.nextInt();
-                System.out.print("Introduzca el alto de la figura rectangular: ");
-                alto = entrada.nextInt();
-
-                for(columna = 1; columna <= ancho; columna++)
-                System.out.print("*");
-                System.out.println();
-
-                for(fila = 1; fila <= alto-2; fila++){
-                    System.out.println("*");
-                    for(columna = 1; columna <= ancho-2; columna++){
-                        System.out.print(" ");
-                    }
-                    System.out.println("*");
+                //dibujo kawwaii
+                System.out.println("Bienvenido al dibujo ");
+                System.out.println("introduzca el lado del cuadrado (entre 1 y 20)");
+                n = entrada.nextInt();
+                while(n < 1 || n > 20){
+                System.out.println("El lado debe de ser de un tamaño de entre 1 y 20");
+                n = entrada.nextInt();
                 }
-
-                for(columna = 1; columna <= ancho; columna++)
+                for(int i = 0;i < n;i++){
+                 for(int j = 0;j < n;j++){
                 System.out.print("*");
+                }
                 System.out.println();
+               }
+                    break;
+
+                case 10:
+                //figura hueca 
+                System.out.println("Figura hueca");
+                System.out.println("introduzca el lado del cuadrado que sea entre 1 y 20");
+                n = entrada.nextInt();
+                while (n < 0){
+            
+                  System.out.println("El numero ingresado es negativo , por favor ingrese un numero positivo");
+                  n = entrada.nextInt();
+                }
+                for(int i = 0;i < n;i++){
+                  for(int j = 0;j < n;j++){
+                    if (i == 0 || i == n-1 || j == 0 || j == n-1){
+                      System.out.print("*");
+                    }else{
+                      System.out.print(" ");
+                    }
+                  }
+                  System.out.println();
+                }
                     break;
 
                 case 11:
+                //patrones de codigo
+                System.out.println("Bienvenido a los patrones de codigo");
+                System.out.printf("%s%s%s%s%s%s%s%s%n","*","*","*","*","*","*","*","*");
+                System.out.printf("%2s%s%s%s%s%s%s%s%n","*","*","*","*","*","*","*","*");
+                System.out.printf("%s%s%s%s%s%s%s%s%n","*","*","*","*","*","*","*","*");
+                System.out.printf("%2s%s%s%s%s%s%s%s%n","*","*","*","*","*","*","*","*");
+                System.out.printf("%s%s%s%s%s%s%s%s%n","*","*","*","*","*","*","*","*");
+                System.out.printf("%2s%s%s%s%s%s%s%s%n","*","*","*","*","*","*","*","*");
+                System.out.printf("%s%s%s%s%s%s%s%s%n","*","*","*","*","*","*","*","*");
+                System.out.printf("%2s%s%s%s%s%s%s%s%n","*","*","*","*","*","*","*","*");
                     break;
+
                 case 12:
+                //diamante brilloso
+                System.out.println("Diamante kawaii");
+                int filas = 9;
+                    int columnas = filas;
+                    int espacios = (columnas - 1) / 2;
+                    for (int i = 0; i < filas; i++) {
+                        for (int j = 0; j < columnas; j++) {
+                            if (j < espacios || j > columnas - espacios - 1) {
+                                System.out.print(" ");
+                            } else { 
+                                System.out.print("*");
+                            }
+                        }
+                        System.out.println();
+                        if (i < filas / 2) {
+                            espacios--;
+                        } else { 
+                            espacios++;
+                        }
+                      }
                     break; 
+
                 case 13:
                 //calculadora
                 System.out.println("Calculadora");
