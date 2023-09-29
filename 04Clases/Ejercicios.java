@@ -101,6 +101,44 @@ class Ejercicios{
     }
 
     public void Ejercicio2(){
+            //vamos a crear un programa que se encargue de convertir
+            //kg a libras
+            //m/s a km/h
+            //m a yardas y millas
+            double metros = 0.00, kg = 0.00, velocidad = 0.00, cm = 100.00, pulgadas = 0.0254, gramos = 1000.00, libra = 0.453592, ms = 0.00;
+            double conversion1, conversion2;
+
+            System.out.println( "Selecciona la cantidad que deseas convertir acorde a las medidas");
+            System.out.println("a. Metros a cm y pulgadas");
+            System.out.println("b. Kilogramos a libras y gramos");
+            System.out.println("c. m/s a km/h");
+            System.out.println("d. Metros a yardas y millas");
+
+            op = entrada.next().charAt(0);
+
+            switch(op){
+                case 'a':
+                System.out.println("Ingresa los metros que deseas transformar: ");
+                metros = entrada.nextDouble();
+                conversion1 = metros * cm;
+                conversion2 = metros * pulgadas;
+                System.out.println("La cantidad en metros es: " + metros + "de m a cm" 
+                + conversion1 + "de m a pulgadas son: " + conversion2);
+                    break;
+                case 'b':
+                System.out.println("Ingresa los kilogramos que deseas transformar: ");
+                kg = entrada.nextDouble();
+                conversion1 = kg * gramos;
+                conversion2 = kg * libra;
+                System.out.println("La cantidad en kg es: " + kg + "de kg a gramos son" 
+                + conversion1 + "de kg a libras son: " + conversion2);
+                    break;
+                case 'c':
+                    break;
+                case 'd':
+                    break;           
+            }
+
 
     }
 
