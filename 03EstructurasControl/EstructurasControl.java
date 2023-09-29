@@ -57,9 +57,9 @@ class EstructurasControl{
             System.out.println("4. Numeros positivos y negativos ");//yo* 
             System.out.println("5. Tiendita "); //profe*
             System.out.println("6. Area y perimetro "); //yo*
-            System.out.println("7. Tabla "); //yo*
+            System.out.println("7. Tabla "); //profe*
             System.out.println("8. Factorial "); //yo*
-            System.out.println("9. Dibujo "); //yo*
+            System.out.println("9. Dibujo "); //profe*
             System.out.println("10. Figura Hueca "); //yo*
             System.out.println("11. Patrones de codigo "); //yo*
             System.out.println("12. Diamante "); //yo*
@@ -261,21 +261,12 @@ class EstructurasControl{
                     break;
                 case 7:
                 //tabla
-                System.out.println("Bienvenido a la tabla de numeros");
-                System.out.println("Aqui se muestran los numeros del 1 al 10, multiplicados x10, x100 y x1000");
-                System.out.println("");
-                System.out.printf("%s%n"," N ");
-                System.out.printf("|%s|%s|%s|%s|%n","1","10","100","1000");
-                System.out.printf("|%s|%s|%s|%s|%n","2","20","200","2000");
-                System.out.printf("|%s|%s|%s|%s|%n","3","30","300","3000");
-                System.out.printf("|%s|%s|%s|%s|%n","4","40","400","4000");
-                System.out.printf("|%s|%s|%s|%s|%n","5","50","500","5000");
-                System.out.printf("|%s|%s|%s|%s|%n","6","60","600","6000");
-                System.out.printf("|%s|%s|%s|%s|%n","7","70","700","7000");
-                System.out.printf("|%s|%s|%s|%s|%n","8","80","800","8000");
-                System.out.printf("|%s|%s|%s|%s|%n","9","90","900","9000");
-                System.out.printf("|%s|%s|%s|%s|%n","10","100","1000","10000");
-                    break;
+                System.out.println("Bienvenido a la tabla");
+                //ciclo for
+                for (n = 1; n <= 10; n++){
+                    System.out.println(n + " " + (n*10) + " " + (n*100) + " " + (n*1000) + " ");
+                }
+                break;
 
                 case 8:
                 //Factorial
@@ -291,19 +282,22 @@ class EstructurasControl{
 
                 case 9:
                 //dibujo kawwaii
-                System.out.println("Bienvenido al dibujo ");
-                System.out.println("introduzca el lado del cuadrado (entre 1 y 20)");
-                n = entrada.nextInt();
-                while(n < 1 || n > 20){
-                System.out.println("El lado debe de ser de un tamaño de entre 1 y 20");
-                n = entrada.nextInt();
+                System.out.println("Bienvenido al dibujo (cuadrito magico)");
+                System.out.println("Introduzca el tamaño del cuadrado a pintar");
+                num1 = entrada.nextInt();
+                
+                if(num1 >= 1 && num1 <= 20){
+                    //ciclo para las filas
+                    for(int i = 1; i <= num1; i++){
+                        //imprimir columnas
+                        for(int j = 1; j <= num1; j++){
+                            System.out.print("*");
+                        }
+                        System.out.println("");
+                    }
+                }else{
+                    System.out.println("Ingresa solo numeros entre el 1 y 20");
                 }
-                for(int i = 0;i < n;i++){
-                 for(int j = 0;j < n;j++){
-                System.out.print("*");
-                }
-                System.out.println();
-               }
                     break;
 
                 case 10:
