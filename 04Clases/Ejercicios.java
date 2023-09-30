@@ -49,7 +49,7 @@ class Ejercicios{
         //o funciones que necesiten una entrada o salida de algun tipo de dato
 
         //calculadora
-        double num1 = 0.00, suma = 0.00, multi = 1.00;
+        double num1 = 0.00, suma = 0.00, multi = 1.00, num2 = 0.00;
         char operacion;
 
         System.out.println("Selecciona la operacion que deseas realizar:");
@@ -92,7 +92,22 @@ class Ejercicios{
             case 'c' :
                 //tareiha
                 //dame un num1 / num2
+                
+                System.out.println("Para detener la division, ingrese el 0");
+            do{
+                System.out.println("Escriba el numero que desee dividir: ");
+                num1 = entrada.nextDouble();
+                System.out.println("Introduzca otro valor: ");
+                num2 = entrada.nextDouble();
+
+                if(num1 != 0 && num2 != 0){
+                num1 /= num2;
+                }
+                
+            }while(num1 != 0 && num2 != 0);
+            System.out.println("El resultado de la operacion es: " + num1 / num2);
                 break;
+
             default:
                 System.out.println("opcion no valida, intentelo despues");
                 break;            
