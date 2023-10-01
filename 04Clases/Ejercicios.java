@@ -49,7 +49,7 @@ class Ejercicios{
         //o funciones que necesiten una entrada o salida de algun tipo de dato
 
         //calculadora
-        double num1 = 0.00, suma = 0.00, multi = 1.00, num2 = 0.00;
+        double num1 = 0.00, suma = 0.00, multi = 1.00;
         char operacion;
 
         System.out.println("Selecciona la operacion que deseas realizar:");
@@ -92,20 +92,16 @@ class Ejercicios{
             case 'c' :
                 //tareiha
                 //dame un num1 / num2
-                
-                System.out.println("Para detener la division, ingrese el 0");
-            do{
+                int division, num, num2;
+        
                 System.out.println("Escriba el numero que desee dividir: ");
-                num1 = entrada.nextDouble();
+                num = entrada.nextInt();
                 System.out.println("Introduzca otro valor: ");
-                num2 = entrada.nextDouble();
+                num2 = entrada.nextInt();
 
-                if(num1 != 0 && num2 != 0){
-                num1 /= num2;
-                }
-                
-            }while(num1 != 0 && num2 != 0);
-            System.out.println("El resultado de la operacion es: " + num1 / num2);
+                division = num / num2;
+            
+            System.out.println("El resultado de la operacion es: " + division);
                 break;
 
             default:
@@ -120,7 +116,7 @@ class Ejercicios{
             //kg a libras
             //m/s a km/h
             //m a yardas y millas
-            double metros = 0.00, kg = 0.00, velocidad = 0.00, cm = 100.00, pulgadas = 0.0254, gramos = 1000.00, libra = 0.453592, ms = 0.00, yardas = 0.914 , millas = 1609.344, kmh = 0.278;
+            double metros = 0.00, kg = 0.00, cm = 100.00, pulgadas = 0.0254, gramos = 1000.00, libra = 0.453592, ms = 0.00, yardas = 0.914 , millas = 1609.344, kmh = 0.278;
             double conversion1, conversion2;
 
             System.out.println( "Selecciona la cantidad que deseas convertir acorde a las medidas");
