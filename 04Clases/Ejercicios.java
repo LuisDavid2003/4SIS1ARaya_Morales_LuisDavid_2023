@@ -120,7 +120,7 @@ class Ejercicios{
             //kg a libras
             //m/s a km/h
             //m a yardas y millas
-            double metros = 0.00, kg = 0.00, velocidad = 0.00, cm = 100.00, pulgadas = 0.0254, gramos = 1000.00, libra = 0.453592, ms = 0.00, yardas = 0.914 , millas = 1609.344;
+            double metros = 0.00, kg = 0.00, velocidad = 0.00, cm = 100.00, pulgadas = 0.0254, gramos = 1000.00, libra = 0.453592, ms = 0.00, yardas = 0.914 , millas = 1609.344, kmh = 0.278;
             double conversion1, conversion2;
 
             System.out.println( "Selecciona la cantidad que deseas convertir acorde a las medidas");
@@ -149,6 +149,11 @@ class Ejercicios{
                 + conversion1 + "de kg a libras son: " + conversion2);
                     break;
                 case 'c':
+                System.out.println("Ingresa los m/s que deseas transformar: ");
+                kg = entrada.nextDouble();
+                conversion1 = ms * kmh;
+                System.out.println("La cantidad en kg es: " + kg + "de kg a gramos son" 
+                + conversion1);
                     break;
                 case 'd':
                 System.out.println("Ingresa los metros que deseas transformar: ");

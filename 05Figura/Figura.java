@@ -60,6 +60,7 @@ public class Figura {
             //manejar el error
             System.out.println("Ingresa solo numeros");
             System.out.println("Error: " + e.getMessage());
+            letra = entrada.next().charAt(0);
         }
     }
 
@@ -77,6 +78,7 @@ public class Figura {
             //manejar el error
             System.out.println("Ingresa solo numeros");
             System.out.println("Error: " + e.getMessage());
+            letra = entrada.next().charAt(0);
         }
     }
 
@@ -100,6 +102,7 @@ public class Figura {
             //manejar el error
             System.out.println("Ingresa solo numeros");
             System.out.println("Error: " + e.getMessage());
+            letra = entrada.next().charAt(0);
         }
         
     }
