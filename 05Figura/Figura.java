@@ -14,10 +14,10 @@ public class Figura {
     //metodos
 
     public void menu(){
-        //vamos hacer un programa para calcular area y perimetro de las figuras
+        //vamos hacer un programa para calcular area y perimetro de las siguientes figuras:
         do{
             System.out.println("Bienvenido al programa de calculo de areas y perimetros");
-            System.out.println("Elija una opcion deseada: ");
+            System.out.println("Elija la opcion deseada: ");
             System.out.println("1.- Cuadrado");
             System.out.println("2.- Rectangulo");
             System.out.println("3.- Triangulo");
@@ -37,7 +37,7 @@ public class Figura {
                     calcularTriangulo();
                     break;
                 default:
-                    System.out.println("Gracias por elegir este lindo programa");
+                    System.out.println("Gracias por elegir este lindo programa, hasta pronto");
                     System.exit(0);
                     break;
             }
