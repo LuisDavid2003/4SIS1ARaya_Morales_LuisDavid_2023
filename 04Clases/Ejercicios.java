@@ -149,7 +149,7 @@ class Ejercicios{
                 System.out.println("Ingresa los m/s que deseas transformar: ");
                 kg = entrada.nextDouble();
                 conversion1 = ms * kmh;
-                System.out.println("La cantidad en kg es: " + kg + "de kg a gramos son" 
+                System.out.println("La cantidad en kg es: " + ms + "de kg a gramos son" 
                 + conversion1);
                     break;
                 case 'd':
@@ -204,10 +204,7 @@ class Ejercicios{
 
     }
 
-
-    
-
     public void Ejercicio4(){
-
+        //desplazamiento de un cuadrito
     }
 }
