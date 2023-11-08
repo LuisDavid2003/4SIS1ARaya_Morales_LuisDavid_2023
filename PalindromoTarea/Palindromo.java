@@ -8,17 +8,16 @@ public class Palindromo {
         System.out.print("Introduzca una palabra o una frase para ver si es un palindromo o no: ");
         String input = scanner.nextLine();
         scanner.close();
-//con esto comprobamos si es polindromo o no ;)
-//llamar la funcion es palindromo para verificar si la frase ingresada es un palindromo
+
         if (esPalindromo(input)) {
-            System.out.println("Es un palíndromo");
+            System.out.println("Si es un palíndromo");
         } else {
             System.out.println("No es un palíndromo");
         }
     }
 
     public static boolean esPalindromo(String str) {
-        str = str.replaceAll("[^a-zA-Z]", "").toLowerCase(); // Eliminar caracteres no alfabéticos y hacer minúsculas.....
+        str = str.replaceAll("[^a-zA-Z]", "").toLowerCase(); 
         int izquierda = 0;
         int derecha = str.length() - 1;
 
@@ -31,4 +30,4 @@ public class Palindromo {
         }
         return true;
     }
-}//fin del programa kawaii
+}
